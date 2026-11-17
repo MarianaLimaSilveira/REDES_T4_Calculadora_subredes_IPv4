@@ -221,22 +221,36 @@ public class Calculadora {
 
         // Modo interativo: pergunta, calcula e repete até o usuário sair
         Scanner teclado = new Scanner(System.in);
-        System.out.println("=== Calculadora de sub-redes IPv4 ===");
-        System.out.println("Máscara: /20 ou 255.255.240.0   |   Digite 'sair' para encerrar");
+        System.out.println("==== Calculadora de sub-redes IPv4 =====");
+        System.out.println("Máscara: /20 ou 255.255.240.0   |   Digite 'X' para encerrar");
         while (true) {
             System.out.print("\nEndereço IPv4: ");
             // hasNextLine é falso quando a entrada acaba (Ctrl+D): encerra com educação
             if (!teclado.hasNextLine()) break;
             String textoIp = teclado.nextLine();
-            if (textoIp.trim().equalsIgnoreCase("sair")) break;
+            if (textoIp.trim().equalsIgnoreCase("X")) break;
 
             System.out.print("Máscara: ");
             if (!teclado.hasNextLine()) break;
             String textoMascara = teclado.nextLine();
-            if (textoMascara.trim().equalsIgnoreCase("sair")) break;
+            if (textoMascara.trim().equalsIgnoreCase("X")) break;
 
             consultar(textoIp, textoMascara);
         }
         System.out.println("\nAté mais!");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ideai do professor, passar os ip pra binário primeiro pq fica mais fácil
